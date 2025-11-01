@@ -28,6 +28,56 @@
     "rootComponents": true
   },
   "teambit.workspace/variants": {
-    "*": {}
+    "packages/types": {
+      "teambit.pkg/pkg": {
+        "packageJson": {
+          "name": "@shared/types",
+          "description": "Shared TypeScript types and interfaces",
+          "version": "0.1.0"
+        }
+      }
+    },
+    "packages/config": {
+      "teambit.pkg/pkg": {
+        "packageJson": {
+          "name": "@shared/config",
+          "description": "Shared configuration constants and API endpoints",
+          "version": "0.1.0"
+        }
+      },
+      "teambit.dependencies/dependency-resolver": {
+        "policy": {
+          "dependencies": {
+            "@shared/types": "workspace:*"
+          }
+        }
+      }
+    },
+    "packages/utils": {
+      "teambit.pkg/pkg": {
+        "packageJson": {
+          "name": "@shared/utils",
+          "description": "Shared utility functions for currency, dates, validation, etc.",
+          "version": "0.1.0"
+        }
+      },
+      "teambit.dependencies/dependency-resolver": {
+        "policy": {
+          "dependencies": {
+            "@shared/types": "workspace:*",
+            "@shared/config": "workspace:*"
+          }
+        }
+      }
+    },
+    "packages/theme": {
+      "teambit.pkg/pkg": {
+        "packageJson": {
+          "name": "@shared/theme",
+          "description": "Design tokens and theme configuration",
+          "version": "0.1.0"
+        }
+      }
+    }
   }
 }

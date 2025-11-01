@@ -8,3 +8,9 @@ coverage
 tmp
 temp
 .task
+
+# Bit
+.bit
+*.bit
+node_modules/@teambit
+.bitmap.backup
