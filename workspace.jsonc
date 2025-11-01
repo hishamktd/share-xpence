@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.bit.dev/teambit/schemas/schema.json",
+  /**
+   * Bit workspace configuration
+   * For full Bit functionality, complete the setup with:
+   * 1. Install Bit: https://bit.dev/docs/getting-started/installing-bit
+   * 2. Run: bit init --harmony
+   * 3. Configure components in packages/
+   */
+  "teambit.workspace/workspace": {
+    "name": "share-xpence",
+    "icon": "https://static.bit.dev/bit-logo.svg",
+    "defaultScope": "org.share-xpence",
+    "defaultDirectory": "packages/{scope}/{name}",
+    "resolveAspectsFromNodeModules": true,
+    "resolveEnvsFromRoots": true
+  },
+  "teambit.generator/generator": {
+    "envs": []
+  },
+  "teambit.dependencies/dependency-resolver": {
+    "packageManager": "teambit.dependencies/pnpm",
+    "policy": {
+      "dependencies": {},
+      "peerDependencies": {}
+    },
+    "linkCoreAspects": true,
+    "rootComponents": true
+  },
+  "teambit.workspace/variants": {
+    "*": {}
+  }
+}
