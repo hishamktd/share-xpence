@@ -8,9 +8,9 @@
   "references": [
     { "path": "./packages/types" },
     { "path": "./packages/config" },
-    { "path": "./packages/utils" }
+    { "path": "./packages/utils" },
+    { "path": "./packages/theme" }
     // Additional packages will be added as they are created:
-    // { "path": "./packages/theme" },
     // { "path": "./packages/redux" },
     // { "path": "./packages/ui" }
   ]
