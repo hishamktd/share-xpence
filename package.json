@@ -1,0 +1,64 @@
+{
+  "name": "share-xpence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Expense Tracker + Splitter Monorepo",
+  "author": "Your Team",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "prepare": "lefthook install",
+    "dev": "pnpm -r --parallel run dev",
+    "build": "pnpm -r run build",
+    "clean": "pnpm -r run clean && rm -rf node_modules .turbo",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,md,yml,yaml}\"",
+    "typecheck": "tsc --build --force",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "test:watch": "echo \"Error: no test specified\"",
+    "test:coverage": "echo \"Error: no test specified\"",
+    "web:dev": "pnpm --filter @app/web dev",
+    "web:build": "pnpm --filter @app/web build",
+    "api:dev": "pnpm --filter @app/api dev",
+    "api:build": "pnpm --filter @app/api build",
+    "packages:build": "pnpm --filter \"./packages/**\" run build",
+    "bit:compile": "bit compile",
+    "bit:tag": "bit tag --all",
+    "bit:export": "bit export"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "lefthook": "^1.10.3",
+    "lint-staged": "^15.2.11",
+    "prettier": "^3.4.2",
+    "typescript": "^5.7.2"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "pnpm": {
+    "overrides": {
+      "typescript": "^5.7.2"
+    }
+  }
+}
