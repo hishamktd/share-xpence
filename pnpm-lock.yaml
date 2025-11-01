@@ -39,7 +39,26 @@ importers:
         specifier: ^5.7.2
         version: 5.9.3
 
+  packages/config:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
   packages/types:
+    devDependencies:
+      typescript:
+        specifier: ^5.7.2
+        version: 5.9.3
+
+  packages/utils:
+    dependencies:
+      '@shared/config':
+        specifier: workspace:*
+        version: link:../config
+      '@shared/types':
+        specifier: workspace:*
+        version: link:../types
     devDependencies:
       typescript:
         specifier: ^5.7.2
