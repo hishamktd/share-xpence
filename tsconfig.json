@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "incremental": true
+  },
+  "files": [],
+  "references": [
+    { "path": "./packages/types" },
+    { "path": "./packages/config" },
+    { "path": "./packages/utils" },
+    { "path": "./packages/theme" },
+    { "path": "./packages/redux" },
+    { "path": "./packages/ui" }
+  ]
+}
